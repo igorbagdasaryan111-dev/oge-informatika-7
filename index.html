@@ -9,7 +9,18 @@
 @media(max-width:660px){.workspace{height:310px}}
 .task{overflow:visible}.tools{position:sticky;top:0;z-index:5;background:#fff;border-radius:12px;padding-top:9px;box-shadow:0 4px 12px #315a7812}
 .tool[data-tool="eraser"][aria-pressed="true"]{background:#fff2d0;border-color:#e5c767;color:#795900}
-.condition-line{white-space:pre-wrap;overflow-wrap:anywhere}</style></head><body>
+.condition-line{white-space:pre-wrap;overflow-wrap:anywhere}.constructor{margin:14px 22px 0;padding:16px;border:1px solid #cde6f6;border-radius:16px;background:#f7fcff}
+.constructor-head{display:flex;justify-content:space-between;align-items:center;gap:10px;color:#173b60}.constructor-head strong{font-size:17px}
+.constructor-reset{background:none;border:0;color:#2877a6;font-weight:700;font-size:13px;padding:8px}
+.constructor-help{font-size:13px;color:#638399;line-height:1.5;margin:7px 0 13px!important}.constructor-label{font-size:12px;font-weight:800;color:#66899d;margin:12px 0 7px}
+.fragment-pool,.fragment-answer{display:flex;align-items:center;flex-wrap:wrap;gap:7px;min-height:53px}.fragment-answer{padding:8px;border:2px dashed #a9cfe6;border-radius:12px;background:white}
+.fragment{display:inline-flex;align-items:center;gap:6px;min-height:38px;padding:5px 10px 5px 5px;background:white;border:1px solid #a9cde3;border-radius:10px;color:#174d70;font-weight:750;box-shadow:0 2px 5px #2e6a8f12;cursor:grab;touch-action:none;user-select:none;-webkit-user-select:none}
+.fragment:focus-visible{outline:3px solid #ffd744;outline-offset:2px}.fragment-number{display:inline-grid;place-items:center;width:25px;height:25px;background:#dff2ff;border-radius:7px;color:#1f70a4;font-size:12px}
+.fragment-answer .fragment{background:#e8f7ff;border-color:#75b5d9}.fragment-answer .fragment-number{background:#2782bd;color:white}.fragment-empty{color:#91aabb;font-size:13px;padding:0 5px}.constructor-hint{font-size:12px;color:#66879b;margin-top:9px;min-height:18px}
+.fragment-ghost{position:fixed;z-index:10000;pointer-events:none;transform:translate(-50%,-50%) rotate(-2deg);box-shadow:0 8px 22px #174d7040;opacity:.95}.fragment-dragging{opacity:.35}
+@media(max-width:660px){.constructor{margin-left:14px;margin-right:14px;padding:13px}.constructor-head strong{font-size:16px}.fragment{min-height:42px}}
+
+</style></head><body>
 <header class="top"><div class="wrap"><nav class="nav"><div class="brand"><span>i</span>igor_exam</div><div class="tag">ОГЭ · ИНФОРМАТИКА</div></nav><div class="hero"><div class="eyebrow">ТЕМА 07 · АДРЕСА В ИНТЕРНЕТЕ</div><h1>Собираем адрес файла<br>в сети Интернет.</h1><p>Сначала изучи короткий конспект и потренируйся, затем реши задания. Пиши прямо на странице и после проверки разбери ошибки.</p><span class="pill">✦ Конспект + тренажёр + 16 заданий</span><div class="links"><a class="primary" href="#theory">Начать изучение ↓</a><a class="secondary" href="#tasks">К заданиям →</a><a class="secondary" href="homework.pdf" download>Скачать PDF</a></div></div></div></header>
 <main class="wrap"><section id="theory" class="section"><div class="sectionhead"><h2>01 / Короткий конспект</h2></div><div class="note-grid"><article class="card"><h3>Из чего состоит адрес?</h3><p>Адрес файла складывается из протокола, адреса сервера и имени файла:</p><div class="highlight"><strong>протокол://сервер/файл</strong></div><p>Например, в <strong>https://school.ru/task.pdf</strong> протокол — https, сервер — school.ru, файл — task.pdf.</p><p>Не теряй двоеточие, косые черты и точки. Иногда эти знаки входят в соседние фрагменты.</p></article><article class="card"><h3>Алгоритм для № 7</h3><div class="rule"><div class="num">1</div><p>Найди в условии <strong>протокол, сервер и имя файла</strong>.</p></div><div class="rule"><div class="num">2</div><p>Запиши полный адрес по схеме <strong>протокол://сервер/файл</strong>.</p></div><div class="rule"><div class="num">3</div><p>Подбери пронумерованные фрагменты и запиши их номера подряд. Проверь, что совпадают все символы.</p></div></article></div></section><section class="section" id="practice"><div class="sectionhead"><h2>02 / Мини-тренажёр</h2></div><article class="card"><h3>Собери адрес</h3><p id="quiz-question"></p><div class="quiz"><label class="visually-hidden" for="quiz-answer">Ответ</label><input class="field" id="quiz-answer" autocomplete="off" placeholder="Введи адрес"><button class="btn primary" id="quiz-check">Проверить</button></div><div id="quiz-feedback" class="feedback"></div><button class="btn secondary" id="quiz-next">Другой вопрос ↻</button></article></section><section class="section" id="example"><div class="sectionhead"><h2>03 / Пример решения</h2></div><article class="card"><h3>Файл cat.txt на сервере zoo.ru, протокол ftp</h3><p>Фрагменты: 1) zoo &nbsp; 2) / &nbsp; 3) ftp &nbsp; 4) .txt &nbsp; 5) :// &nbsp; 6) cat &nbsp; 7) .ru</p><div class="example"><p><strong>1.</strong> Составим адрес: ftp://zoo.ru/cat.txt.</p><p><strong>2.</strong> Находим фрагменты: 3 → 5 → 1 → 7 → 2 → 6 → 4.</p><p><strong>Ответ: 3517264.</strong></p></div></article></section><section class="section" id="tasks"><div class="sectionhead"><h2>04 / Задания</h2><span class="small">16 задач · пиши прямо на странице</span></div><div class="card"><h3>Как писать на телефоне</h3><p>Выбери <strong>«Ручка»</strong>, <strong>«Маркер»</strong> или <strong>«Ластик»</strong> и рисуй пальцем по условию и в клетках. Чтобы листать, проведи пальцем за пределами этих областей. В режиме <strong>«Прокрутка»</strong> можно листать и по ним. Ластик удаляет линию целиком; «Отменить» вернёт последнее действие.</p><p class="small">Ответы и рисунки сохраняются в этом браузере на устройстве. При очистке данных браузера они могут исчезнуть.</p><label for="student-name"><strong>Имя и фамилия</strong></label><input id="student-name" class="field" autocomplete="name" placeholder="Например, Аня Иванова" style="margin-top:8px"></div><div id="task-list"></div><div class="card summary-card"><h3>Всё готово?</h3><p>Нажми кнопку — увидишь количество и процент правильных ответов. После проверки появятся подробные разборы под каждым заданием.</p><button class="btn primary" id="check-all">Проверить работу →</button><div class="result" id="result" aria-live="polite"><strong id="score"></strong><p id="score-note"></p><textarea class="report" id="report" readonly aria-label="Результат для преподавателя"></textarea><div class="actions"><button class="btn secondary" id="copy">Скопировать результат</button><a class="btn secondary" href="#tasks">Вернуться к заданиям ↑</a></div><p class="small">Результат сам никуда не отправляется: скопируй его и отправь преподавателю.</p></div></div></section></main><footer><div class="wrap">igor_exam &nbsp; / &nbsp; ОГЭ по информатике</div></footer>
 <script>
@@ -24,6 +35,68 @@ const esc=s=>s.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&g
 const list=document.querySelector('#task-list');
 function solutionText(t,i){return t.solution}
 tasks.forEach((t,i)=>{let node=document.createElement('article');node.className='card task';node.dataset.index=i;const paras=t.lines.map(line=>`<p class="condition-line">${esc(line).replaceAll('&lt;br/&gt;','<br>')}</p>`).join('');node.innerHTML=`<div class="task-head"><h3>Задание ${String(i+1).padStart(2,'0')}</h3><span class="badge" id="badge-${i}">1 балл</span></div><div class="tools" role="group" aria-label="Инструменты задания ${i+1}"><button class="tool" data-tool="scroll" aria-pressed="true">☝ Прокрутка</button><button class="tool" data-tool="pen" aria-pressed="false">✎ Ручка</button><button class="tool" data-tool="marker" aria-pressed="false">▰ Маркер</button><button class="tool" data-tool="eraser" aria-pressed="false">⌫ Ластик</button><button class="tool" data-action="undo">↶ Отменить</button><button class="tool" data-action="clear">Очистить линии</button></div><div class="scroll-hint">Пиши в условии или в клетках. Листай снаружи, либо включи «Прокрутка».</div><div class="condition draw-area" data-zone="condition">${paras}<svg class="draw-overlay" aria-label="Пометки на условии" viewBox="0 0 1000 1000" preserveAspectRatio="none"></svg></div><div class="workspace draw-area" data-zone="work"><svg class="draw-overlay" aria-label="Поле для рукописного решения" viewBox="0 0 1000 1000" preserveAspectRatio="none"></svg></div><div class="answer-area"><div class="answer-grid"><label for="answer-${i}">Ответ<input class="field" id="answer-${i}" autocomplete="off" placeholder="Последовательность цифр" value="${esc(state.answers[i]||'')}"></label></div><div class="feedback" id="feedback-${i}" aria-live="polite"></div><details class="solution" id="solution-${i}" hidden><summary>Посмотреть разбор</summary><p>${esc(solutionText(t,i))}</p></details></div>`;list.append(node);node.querySelector(`#answer-${i}`).addEventListener('input',e=>{state.answers[i]=e.target.value;save()});setupDrawing(node,i)});
+// Each constructor uses the existing answer field as its single source of truth.
+document.querySelectorAll('.task').forEach((card,index)=>{
+  const fragments=[...tasks[index].lines[1].matchAll(/(?:^|\s)([1-7])\)\s*(\S+)/g)].map(m=>({id:m[1],text:m[2]}));
+  if(fragments.length!==7)return;
+  const input=card.querySelector(`#answer-${index}`);
+  const box=document.createElement('section');
+  box.className='constructor';
+  box.setAttribute('aria-label',`Конструктор адреса для задания ${index+1}`);
+  box.innerHTML='<div class="constructor-head"><strong>Собери адрес</strong><button type="button" class="constructor-reset">Начать заново ↺</button></div><p class="constructor-help">Перетаскивай фрагменты в строку адреса или нажимай на них по порядку. Чтобы изменить порядок, перетащи фрагмент или нажми на него и выбери снова.</p><div class="constructor-label">Фрагменты</div><div class="fragment-pool" aria-label="Доступные фрагменты"></div><div class="constructor-label">Твой адрес</div><div class="fragment-answer" aria-label="Собранный адрес"></div><div class="constructor-hint" aria-live="polite"></div>';
+  card.querySelector('.answer-area').before(box);
+  const pool=box.querySelector('.fragment-pool'), assembled=box.querySelector('.fragment-answer'), hint=box.querySelector('.constructor-hint');
+  let chosen=[], suppressClick=false;
+  function validOrder(v){const chars=v.trim().split('');return chars.every(x=>/^[1-7]$/.test(x))&&new Set(chars).size===chars.length?chars:[]}
+  function render(){
+    pool.replaceChildren();assembled.replaceChildren();
+    function chip(part,selected){
+      const b=document.createElement('button');b.type='button';b.className='fragment';b.dataset.id=part.id;b.dataset.selected=selected?'1':'0';
+      b.setAttribute('aria-label',`${selected?'Убрать':'Добавить'} фрагмент ${part.id}: ${part.text}`);
+      const n=document.createElement('span');n.className='fragment-number';n.textContent=part.id;
+      const text=document.createElement('span');text.textContent=part.text;b.append(n,text);
+      b.addEventListener('click',()=>{if(suppressClick){suppressClick=false;return} if(selected)chosen=chosen.filter(x=>x!==part.id);else chosen.push(part.id);commit()});
+      b.addEventListener('pointerdown',startDrag);return b;
+    }
+    fragments.filter(p=>!chosen.includes(p.id)).forEach(p=>pool.append(chip(p,false)));
+    chosen.forEach(id=>{const p=fragments.find(x=>x.id===id);if(p)assembled.append(chip(p,true))});
+    if(!chosen.length){const empty=document.createElement('span');empty.className='fragment-empty';empty.textContent='Перетащи сюда фрагменты';assembled.append(empty)}
+    hint.textContent=chosen.length?`Фрагментов: ${chosen.length} из 7 · цифры в ответе: ${chosen.join('')}`:'Цифры появятся в поле ответа автоматически.';
+  }
+  function commit(){input.value=chosen.join('');state.answers[index]=input.value;save();render()}
+  input.addEventListener('input',()=>{chosen=validOrder(input.value);render()});
+  box.querySelector('.constructor-reset').addEventListener('click',()=>{chosen=[];commit()});
+  function startDrag(e){
+    if(e.button!==0)return;
+    const original=e.currentTarget,id=original.dataset.id,fromSelected=original.dataset.selected==='1',startX=e.clientX,startY=e.clientY;
+    let ghost=null,moved=false;
+    original.setPointerCapture(e.pointerId);
+    function move(ev){
+      if(!moved&&Math.hypot(ev.clientX-startX,ev.clientY-startY)<7)return;
+      if(!moved){moved=true;ghost=original.cloneNode(true);ghost.classList.add('fragment-ghost');ghost.setAttribute('aria-hidden','true');document.body.append(ghost);original.classList.add('fragment-dragging')}
+      ev.preventDefault();ghost.style.left=ev.clientX+'px';ghost.style.top=ev.clientY+'px';
+    }
+    function finish(ev){
+      original.removeEventListener('pointermove',move);original.removeEventListener('pointerup',finish);original.removeEventListener('pointercancel',cancel);
+      if(!moved)return;
+      if(ghost)ghost.remove();original.classList.remove('fragment-dragging');suppressClick=true;
+      const target=document.elementFromPoint(ev.clientX,ev.clientY),inAnswer=target&&assembled.contains(target),inPool=target&&pool.contains(target);
+      if(inAnswer){
+        chosen=chosen.filter(x=>x!==id);
+        const item=target.closest('.fragment');
+        let position=item?chosen.indexOf(item.dataset.id):-1;
+        if(position<0)position=chosen.length;
+        else {const r=item.getBoundingClientRect();if(ev.clientX>r.left+r.width/2)position++}
+        chosen.splice(position,0,id);commit();
+      }else if(inPool&&fromSelected){chosen=chosen.filter(x=>x!==id);commit()}
+      setTimeout(()=>{suppressClick=false},0);
+    }
+    function cancel(){original.removeEventListener('pointermove',move);original.removeEventListener('pointerup',finish);original.removeEventListener('pointercancel',cancel);if(ghost)ghost.remove();original.classList.remove('fragment-dragging')}
+    original.addEventListener('pointermove',move);original.addEventListener('pointerup',finish);original.addEventListener('pointercancel',cancel);
+  }
+  chosen=validOrder(input.value);render();
+});
+
 document.querySelector('#student-name').value=state.name||'';document.querySelector('#student-name').addEventListener('input',e=>{state.name=e.target.value;save()});
 let activeDrawingCard=null;
 function setupDrawing(card,index){
